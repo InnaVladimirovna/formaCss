@@ -1,0 +1,80 @@
+h1{
+    text-align: center;
+    text-decoration: underline;
+}
+form{
+    width: 615px;
+    margin: 0 auto;
+    border-radius: 6px;
+    box-shadow: 0 0 9px gray;
+    padding: 27px;
+    box-sizing: border-box;
+}
+fieldset{
+    padding: 11px;
+    border-radius:9px;
+    border: 1px solid darkblue
+}
+.part{
+    width: 50%;
+    display: inline-block;
+    margin-right: -5px;
+}
+.part input, select, output{
+    width: 80%;
+    height: 25px;
+    border: 1px solid gray;
+    border-radius: 5px;
+   padding: 2px 5px;
+vertical-align: middle;
+}
+.star{
+    color: red;
+}
+label{
+    display: block;
+    margin-bottom: 5px;
+}
+input[disabled]{
+    background: #ebebe3;
+}
+input:required:valid{
+    border-color: green;
+}
+input:required:invalid{
+    border-color: red;
+}
+output{
+    width: 30px;
+    text-align: center;
+    display: inline-block;
+}
+.all{
+    width: 100%;
+}
+input[type=radio],input[type=checkbox]{
+    display: none;
+}
+input[type=radio]+label::before,input[type=checkbox]+label::before{
+    content: "";
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border: 3px solid white;
+    box-shadow: 0 0 0 3px gray;
+    vertical-align: middle;
+}
+input[type=radio]+label::before{
+    border-radius: 50%;
+}
+input[type=radio]:checked+label::before,input[type=checkbox]:checked+label::before{
+    background: rgb(204, 172, 188);
+    box-shadow: 0 0 0 3px rgb(204, 172, 188);
+}
+.lradio{
+    float: left;
+    margin: 15px;
+}
+input:checked+label,input:checked{
+    color:  rgb(204, 172, 188);
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Форма отзыва</h1>
+    <form action="#" method="post" enctype="multipart/form-data" oninput="travel.value=tra.value; gaude.value=gaud.value; hotele.value=hotel.value;
+     all.value=parseInt((parseInt(tra.value)+parseInt(gaud.value)+parseInt(hotel.value))/3)">
+        <fieldset>
+            <legend>Личные данные</legend>
+            <div class="part">
+        <label for="">ID отзыва</label>
+        <input type="text" name="id" id="" value="12345" disabled>
+    </div>
+    <div class="part">
+        <label for="name">Имя Путешественника<span class="star">*</span></label>
+        <input type="text" placeholder="ваше имя"  name="name" value="" id="name" pattern="(([A-Z][a-z]+\s[A-Z][a-z]+)|([А-Я][а-яїі]+\s[А-Я][а-яїі]+))" required>
+    </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Отзыв о поездке</legend>
+            <div class="part">
+                <label for="country">Страна визита</label>
+               <select name="country" id="country">
+               <option></option>
+               <option>Украина</option>
+               <option>Англия</option>
+               <option>Канада</option>
+               <option>Китай</option></select>
+            </div>
+            <div class="part">
+                <label for="city">Город</label>
+                <input type="search" name="city" id="city" pattern="[А-Я][а-яїі]+">
+    </div>
+            <div class="part">
+                <label for="range">Оценка поездки</label>
+                0<input type="range" id="tra" min="0" max="10" name="range">10
+                </div>
+                <div class="part">
+                    <label for="travel">Ви получили впечатлений на</label>
+                    <output name="travel">10</output>
+                </div>
+                <div class="part">
+                <label for="gaud">Оценка гида</label>
+                0<input type="range" id="gaud" min="0" max="10" name="gaud">10
+            </div>
+            <div class="part">
+                <output name="gaude">10</output>
+            </div>
+                <div class="part">
+                <label for="hotel">Оценка отеля</label>
+                0<input type="range" id="hotel" min="0" max="10" name="hotel">10
+            </div>
+            <div class="part">
+                <output name="hotele">10</output>
+            </div>
+            <div class="part">
+                <label for="">Общее впечетление</label>
+                <output name="all">10</output>
+            </div>
+            <div class="part">
+                <label for="">Хотите вернуться?</label>
+                <input  id="yes1" checked type="radio" name="yes" value="yes">
+                <label class="lradio" for="yes1">Да</label>
+                <input id="not1" type="radio" name="yes" value="not">
+                <label class="lradio" for="not1">Нет</label>
+                </div>
+                <div class="part">
+                    <label for="">Вам нравится путешествовать:</label>
+                <input type="checkbox" name="" value="" id="train">
+                <label for="train">Поездом</label>
+
+                </div>
+                
+            </div>
+         
+
+        </fieldset>
+    </form>
+    
+</body>
+</html>
